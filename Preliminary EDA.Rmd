@@ -1,0 +1,57 @@
+---
+title: "Final Project Preliminary EDA"
+author: "Haichen Wei"
+date: "Nov 15, 2020"
+output: html_notebook
+---
+
+# Guiding Question
+
+Compare the nutrition facts cereal products and Starbucks menu, which one is a better choice for breakfast?
+
+# Become acquainted with your data sources
+
+### Where did you find them?
+
+Kaggle
+
+### Who collected/maintains them?
+
+• 80 Cereals: 
+
+1. These datasets have been gathered and cleaned up by Petra Isenberg, Pierre Dragicevic and Yvonne Jansen. The original source can be found at https://perso.telecom-paristech.fr/eagan/class/igr204/datasets.
+
+2. Chris Crawford created and maintain this dataset at Kaggle.
+
+• Nutrition facts for Starbucks Menu:
+Starbucks is the maintainer for this dataset.
+
+### When & Why were they originally collected?
+• Chris Crawford created the 80 cereals dataset on 2017-08-18, last updated is 
+2017-10-24. He stated that "Ruin your appetite for sugary cereal with this dataset!"
+
+• Starbucks created the dataset on 2017-07-18, last updated is 2017-07-20. This dataset includes the nutritional information for Starbucks’ food and drink menu items. All nutritional information for drinks are for a 12oz serving size.
+
+### What does a case represent in each data source, and how many total cases are available?
+• 80 Cereals: 
+
+• Nutrition facts for Starbucks Menu:
+
+### What are some of the variables that you plan to use
+
+
+# Explore intuition related to the research question
+
+### informative plots
+### preliminary observations
+
+# Two or more data sources
+
+
+
+
+
+
+
+
+
