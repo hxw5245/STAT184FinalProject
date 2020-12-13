@@ -1752,8 +1752,93 @@ summary {
 
 
 <!-- rnb-text-begin -->
+<div id="set-up" class="section level1">
+<h1>Set Up</h1>
+<div id="clean-up-environment-and-load-packages" class="section level3">
+<h3>Clean up environment and load packages</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjbGVhbiB1cCB0aGUgUlN0dWRpbyBlbnZpcm9ubWVudCBcbnJtKGxpc3QgPSBscygpKVxuXG4jIGxvYWQgYWxsIHBhY2thZ2VzIGhlcmU6IFxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KG1vc2FpYylcbmBgYCJ9 -->
+<pre class="r"><code># clean up the RStudio environment 
+rm(list = ls())
+
+# load all packages here: 
+library(tidyverse)
+library(mosaic)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdodG1sdG9vbHMnOlxuICBtZXRob2QgICAgICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWwgICAgICAgICAgIHRvb2xzOnJzdHVkaW9cbiAgcHJpbnQuc2hpbnkudGFnICAgICAgdG9vbHM6cnN0dWRpb1xuICBwcmludC5zaGlueS50YWcubGlzdCB0b29sczpyc3R1ZGlvXG5SZWdpc3RlcmVkIFMzIG1ldGhvZCBvdmVyd3JpdHRlbiBieSAnaHRtbHdpZGdldHMnOlxuICBtZXRob2QgICAgICAgICAgIGZyb20gICAgICAgICBcbiAgcHJpbnQuaHRtbHdpZGdldCB0b29sczpyc3R1ZGlvXG5SZWdpc3RlcmVkIFMzIG1ldGhvZCBvdmVyd3JpdHRlbiBieSAnbW9zYWljJzpcbiAgbWV0aG9kICAgICAgICAgICAgICAgICAgICAgICAgICAgZnJvbSAgIFxuICBmb3J0aWZ5LlNwYXRpYWxQb2x5Z29uc0RhdGFGcmFtZSBnZ3Bsb3QyXG5cblRoZSAnbW9zYWljJyBwYWNrYWdlIG1hc2tzIHNldmVyYWwgZnVuY3Rpb25zIGZyb20gY29yZSBwYWNrYWdlcyBpbiBvcmRlciB0byBhZGQgXG5hZGRpdGlvbmFsIGZlYXR1cmVzLiAgVGhlIG9yaWdpbmFsIGJlaGF2aW9yIG9mIHRoZXNlIGZ1bmN0aW9ucyBzaG91bGQgbm90IGJlIGFmZmVjdGVkIGJ5IHRoaXMuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhtb3NhaWPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpNYXRyaXjigJk6XG5cbiAgICBtZWFuXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpkcGx5cuKAmTpcblxuICAgIGNvdW50LCBkbywgdGFsbHlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpwdXJycuKAmTpcblxuICAgIGNyb3NzXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6Z2dwbG90MuKAmTpcblxuICAgIHN0YXRcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgYmlub20udGVzdCwgY29yLCBjb3IudGVzdCwgY292LCBmaXZlbnVtLCBJUVIsIG1lZGlhbixcbiAgICBwcm9wLnRlc3QsIHF1YW50aWxlLCBzZCwgdC50ZXN0LCB2YXJcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBtYXgsIG1lYW4sIG1pbiwgcHJvZCwgcmFuZ2UsIHNhbXBsZSwgc3VtXG4ifQ== -->
+<pre><code>Registered S3 methods overwritten by 'htmltools':
+  method               from         
+  print.html           tools:rstudio
+  print.shiny.tag      tools:rstudio
+  print.shiny.tag.list tools:rstudio
+Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+Registered S3 method overwritten by 'mosaic':
+  method                           from   
+  fortify.SpatialPolygonsDataFrame ggplot2
+
+The 'mosaic' package masks several functions from core packages in order to add 
+additional features.  The original behavior of these functions should not be affected by this.
+
+Attaching package: ‘mosaic’
+
+The following object is masked from ‘package:Matrix’:
+
+    mean
+
+The following objects are masked from ‘package:dplyr’:
+
+    count, do, tally
+
+The following object is masked from ‘package:purrr’:
+
+    cross
+
+The following object is masked from ‘package:ggplot2’:
+
+    stat
+
+The following objects are masked from ‘package:stats’:
+
+    binom.test, cor, cor.test, cov, fivenum, IQR, median,
+    prop.test, quantile, sd, t.test, var
+
+The following objects are masked from ‘package:base’:
+
+    max, mean, min, prod, range, sample, sum</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShEYXRhQ29tcHV0aW5nKVxuYGBgIn0= -->
+<pre class="r"><code>library(DataComputing)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbGlicmFyeShEYXRhQ29tcHV0aW5nKSA6IFxuICB0aGVyZSBpcyBubyBwYWNrYWdlIGNhbGxlZCDigJhEYXRhQ29tcHV0aW5n4oCZXG4ifQ== -->
+<pre><code>Error in library(DataComputing) : 
+  there is no package called ‘DataComputing’</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcIkRhdGFDb21wdXRpbmdcIilcbmBgYCJ9 -->
+<pre class="r"><code>install.packages(&quot;DataComputing&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBpbiBpbnN0YWxsLnBhY2thZ2VzIDpcbiAgcGFja2FnZSDigJhEYXRhQ29tcHV0aW5n4oCZIGlzIG5vdCBhdmFpbGFibGUgKGZvciBSIHZlcnNpb24gMy42LjMpXG4ifQ== -->
+<pre><code>Warning in install.packages :
+  package ‘DataComputing’ is not available (for R version 3.6.3)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
 <div id="data-access" class="section level1">
 <h1>Data Access</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQ2VyZWFscyA8LSByZWFkX2NzdihcImh0dHBzOi8vd3d3LmthZ2dsZS5jb20vY3Jhd2ZvcmQvODAtY2VyZWFscz9zZWxlY3Q9Y2VyZWFsLmNzdlwiKVxuQ2VyZWFsc1xuYGBgIn0= -->
+<pre class="r"><code>Cereals &lt;- read_csv(&quot;https://www.kaggle.com/crawford/80-cereals?select=cereal.csv&quot;)
+Cereals</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="data-wrangling" class="section level1">
 <h1>Data Wrangling</h1>
@@ -1763,7 +1848,7 @@ summary {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmluYWwgUHJvamVjdCIKYXV0aG9yOiAiSGFpY2hlbiBXZWkiCmRhdGU6ICJEZWMgMTMsIDIwMjAiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMgRGF0YSBBY2Nlc3MKIyBEYXRhIFdyYW5nbGluZwojIERhdGEgVmlzdWFsaXphdGlvbgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmluYWwgUHJvamVjdCIKYXV0aG9yOiAiSGFpY2hlbiBXZWkiCmRhdGU6ICJEZWMgMTMsIDIwMjAiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMgU2V0IFVwCgojIyMgQ2xlYW4gdXAgZW52aXJvbm1lbnQgYW5kIGxvYWQgcGFja2FnZXMKYGBge3J9CiMgY2xlYW4gdXAgdGhlIFJTdHVkaW8gZW52aXJvbm1lbnQgCnJtKGxpc3QgPSBscygpKQoKIyBsb2FkIGFsbCBwYWNrYWdlcyBoZXJlOiAKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkobW9zYWljKQpsaWJyYXJ5KERhdGFDb21wdXRpbmcpCmBgYApgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcyhkYXRhY29tKQpgYGAKIyBEYXRhIEFjY2VzcwoKYGBge3J9CkNlcmVhbHMgPC0gcmVhZF9jc3YoImh0dHBzOi8vd3d3LmthZ2dsZS5jb20vY3Jhd2ZvcmQvODAtY2VyZWFscz9zZWxlY3Q9Y2VyZWFsLmNzdiIpCkNlcmVhbHMKYGBgCiMgRGF0YSBXcmFuZ2xpbmcKIyBEYXRhIFZpc3VhbGl6YXRpb24K</div>
 
 
 

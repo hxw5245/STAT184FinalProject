@@ -5,6 +5,26 @@ date: "Dec 13, 2020"
 output: html_notebook
 ---
 
+# Set Up
+
+### Clean up environment and load packages
+```{r}
+# clean up the RStudio environment 
+rm(list = ls())
+
+# load all packages here: 
+library(tidyverse)
+library(mosaic)
+library(DataComputing)
+```
+```{r}
+install.packages(datacom)
+```
 # Data Access
+
+```{r}
+Cereals <- read_csv("https://www.kaggle.com/crawford/80-cereals?select=cereal.csv")
+Cereals
+```
 # Data Wrangling
 # Data Visualization
