@@ -1,7 +1,7 @@
 ---
 title: 'Final Project: Guidance Document'
-author: "Author Name(s)"
-date: "Due December 11, 2020"
+author: "Haichen Wei"
+date: "Due December 13, 2020"
 output:  html_notebook
 ---
 
@@ -18,10 +18,11 @@ output:  html_notebook
 *Description: (1) Analysis includes at least two different data sources. (2) Primary data source may NOT be loaded from an R package--though supporting data may. (3) Access to all data sources is contained within the analysis. (4) Imported data is inspected at beginning of analysis using one or more R functions: e.g., str, glimpse, head, tail, names, nrow, etc*
 
 (A) .Rmd Line numbers where at least two different data sources are imported:  
-
+193-196
 
 (B) .Rmd Line numbers for inspecting data intake:  
 
+37-58
 
 ### Data Wrangling (5 out of 8 required)
 
@@ -29,28 +30,28 @@ output:  html_notebook
 
 
 (A) .Rmd Line number(s) for general data wrangling: 
-
+62-75, 78-89, 107-118
 
 (B) .Rmd Line number(s) for a join operation: 
-
+120-123, 159-164
 
 (C) .Rmd Line number(s) for a spread or gather operation (or equivalent):
-
+93-99, 148-157
 
 (D) .Rmd Line number(s) for use of regular expressions: 
-
+101-105
 
 (E) .Rmd Line number(s) for use of reduction and/or transformation functions: 
-
+127-146
 
 (F) .Rmd Line number(s) for use of user-defined functions: 
-
+no
 
 (G) .Rmd Line number(s) for use of loops and/or control flow: 
-
+no
 
 (H) .Rmd Line number(s) for use of machine learning (not "wrangling" but scored here): 
-
+no
 
 
 ### Data Visualization (3 of 5 required)
@@ -59,15 +60,15 @@ output:  html_notebook
 
 
 (A) .Rmd Line number(s) for use of mulitple different geoms:  
-
+170-184
 (B) .Rmd Line number(s) for use of multiple aesthetics:  
-
+170-184
 (C) .Rmd Line number(s) for use of layered graphics:  
-
+170-184
 (D) .Rmd Line number(s) for use of leaflet maps:  
-
+no
 (E) .Rmd Line number(s) for use of decision tree or dendogram results:    
-
+no
 
 
 
