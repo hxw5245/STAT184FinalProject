@@ -191,8 +191,9 @@ All of these three types of food are not very healthy, they has little fiber and
 ## Reference
 
 Crawford, C.(2017). 80 Cereals. Retrieved from https://www.kaggle.com/crawford/80-cereals?select=cereal.csv.
+
 Starbucks.(2017). Nutrition facts for Starbucks Menu. https://www.kaggle.com/starbucks/starbucks-menu?select=starbucks-menu-nutrition-food.csv
+
 McDonald.(2017). Nutrition Facts for McDonald's Menu. https://www.kaggle.com/mcdonalds/nutrition-facts?select=menu.csv
 
-## GitHub Links
 
