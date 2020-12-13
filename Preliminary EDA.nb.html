@@ -231,7 +231,7 @@ summary {
 <!-- rnb-text-begin -->
 <div id="guiding-question" class="section level1">
 <h1>Guiding Question</h1>
-<p>Compare the nutrition facts cereal products and Starbucks menu, which one is a better choice for breakfast?</p>
+<p>Compare the nutrition facts cereal products, Starbucks and McDonald’s menu, which one is a better choice for breakfast?</p>
 </div>
 <div id="become-acquainted-with-your-data-sources" class="section level1">
 <h1>Become acquainted with your data sources</h1>
@@ -246,37 +246,92 @@ summary {
 <li><p>These datasets have been gathered and cleaned up by Petra Isenberg, Pierre Dragicevic and Yvonne Jansen. The original source can be found at <a href="https://perso.telecom-paristech.fr/eagan/class/igr204/datasets" class="uri">https://perso.telecom-paristech.fr/eagan/class/igr204/datasets</a>.</p></li>
 <li><p>Chris Crawford created and maintain this dataset at Kaggle.</p></li>
 </ol>
-<p>• Nutrition facts for Starbucks Menu: Starbucks is the maintainer for this dataset.</p>
+<p>• Nutrition facts for Starbucks Menu:</p>
+<p>Starbucks is the maintainer for this dataset.</p>
+<p>• Nutrition Facts for McDonald’s Menu:</p>
+<p>McDonald’s is the maintainer for this dataset.</p>
 </div>
 <div id="when-why-were-they-originally-collected" class="section level3">
 <h3>When &amp; Why were they originally collected?</h3>
 <p>• Chris Crawford created the 80 cereals dataset on 2017-08-18, last updated is 2017-10-24. He stated that “Ruin your appetite for sugary cereal with this dataset!”</p>
-<p>• Starbucks created the dataset on 2017-07-18, last updated is 2017-07-20. This dataset includes the nutritional information for Starbucks’ food and drink menu items. All nutritional information for drinks are for a 12oz serving size.</p>
+<p>• Starbucks created the dataset on 2017-07-18, last updated is 2017-07-20. This dataset includes the nutritional information for Starbucks’ food and drink menu items.</p>
+<p>• McDonald’s created the dataset on 2017-03-03. This dataset provides a nutrition analysis of every menu item on the US McDonald’s menu.</p>
 </div>
 <div id="what-does-a-case-represent-in-each-data-source-and-how-many-total-cases-are-available" class="section level3">
 <h3>What does a case represent in each data source, and how many total cases are available?</h3>
-<p>• 80 Cereals:</p>
-<p>• Nutrition facts for Starbucks Menu:</p>
+<p>• 80 Cereals: each cereal’s nutrition facts. It has 77 total cases.</p>
+<p>• Nutrition facts for Starbucks Menu: a kind of food’s nutrition facts. It has 113 total cases.</p>
+<p>• Nutrition Facts for McDonald’s Menu: every menu item’s nutrition facts. It has 260 total cases.</p>
 </div>
 <div id="what-are-some-of-the-variables-that-you-plan-to-use" class="section level3">
 <h3>What are some of the variables that you plan to use</h3>
+<p>Since cereals data has 16 columns, McDonald’s has 24 columns, and Starbucks has 6 columns, I want to choose the common columns of them, such as name, Calories, Fat, Carb., Fiber, Protein. The cereals dataset also has type and Manufacturer, these two variables may be useful.</p>
 </div>
 </div>
 <div id="explore-intuition-related-to-the-research-question" class="section level1">
 <h1>Explore intuition related to the research question</h1>
 <div id="informative-plots" class="section level3">
 <h3>informative plots</h3>
+<p>• Range for cereals:</p>
+<ol style="list-style-type: decimal">
+<li>Calories: 50-160</li>
+<li>Fat(g): 0-5</li>
+<li>Carb.(g): -1~23</li>
+<li>Fiber(g):0-14</li>
+<li>Protein(g): 1-6</li>
+</ol>
+<p>• Range for Starbucks:</p>
+<ol style="list-style-type: decimal">
+<li>Calories: 90-650</li>
+<li>Fat(g): 0-37</li>
+<li>Carb.(g): 5-80</li>
+<li>Fiber(g): 0-21</li>
+<li>Protein(g): 1-34</li>
+</ol>
+<p>• Range for McDonald’s:</p>
+<ol style="list-style-type: decimal">
+<li>Calories: 0-1880</li>
+<li>Fat(g): 0-118</li>
+<li>Carb.(g): 0-141</li>
+<li>Fiber(g): 0-7</li>
+<li>Protein(g): 0-87</li>
+</ol>
 </div>
 <div id="preliminary-observations" class="section level3">
 <h3>preliminary observations</h3>
+<p>It seems like McDonald’s has the highest data for all the variables, and cereal has the lowest, however, the Starbucks and McDonald’s have many items, this research is for breakfast, so I may need to delete some items and recreate a new table for these two datasets.</p>
 </div>
 </div>
-<div id="two-or-more-data-sources" class="section level1">
-<h1>Two or more data sources</h1>
+<div id="data-sources" class="section level1">
+<h1>Data sources</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KG1vc2FpYylcbkNlcmVhbHMgPC0gbW9zYWljOjpyZWFkLmZpbGUoXCJodHRwczovL3d3dy5rYWdnbGUuY29tL2NyYXdmb3JkLzgwLWNlcmVhbHM/c2VsZWN0PWNlcmVhbC5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>library(tidyverse)
+library(mosaic)
+Cereals &lt;- mosaic::read.file(&quot;https://www.kaggle.com/crawford/80-cereals?select=cereal.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVhZGluZyBkYXRhIHdpdGggcmVhZC5jc3YoKVxuIn0= -->
+<pre><code>Reading data with read.csv()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3RhcmJ1Y2tzIDwtIG1vc2FpYzo6cmVhZC5maWxlKFwiaHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9zdGFyYnVja3Mvc3RhcmJ1Y2tzLW1lbnU/c2VsZWN0PXN0YXJidWNrcy1tZW51LW51dHJpdGlvbi1mb29kLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>Starbucks &lt;- mosaic::read.file(&quot;https://www.kaggle.com/starbucks/starbucks-menu?select=starbucks-menu-nutrition-food.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVhZGluZyBkYXRhIHdpdGggcmVhZC5jc3YoKVxuIn0= -->
+<pre><code>Reading data with read.csv()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTWNEb25hbGRzIDwtIG1vc2FpYzo6cmVhZC5maWxlKFwiaHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9tY2RvbmFsZHMvbnV0cml0aW9uLWZhY3RzP3NlbGVjdD1tZW51LmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>McDonalds &lt;- mosaic::read.file(&quot;https://www.kaggle.com/mcdonalds/nutrition-facts?select=menu.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVhZGluZyBkYXRhIHdpdGggcmVhZC5jc3YoKVxuIn0= -->
+<pre><code>Reading data with read.csv()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmluYWwgUHJvamVjdCBQcmVsaW1pbmFyeSBFREEiCmF1dGhvcjogIkhhaWNoZW4gV2VpIgpkYXRlOiAiTm92IDE1LCAyMDIwIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIEd1aWRpbmcgUXVlc3Rpb24KCkNvbXBhcmUgdGhlIG51dHJpdGlvbiBmYWN0cyBjZXJlYWwgcHJvZHVjdHMgYW5kIFN0YXJidWNrcyBtZW51LCB3aGljaCBvbmUgaXMgYSBiZXR0ZXIgY2hvaWNlIGZvciBicmVha2Zhc3Q/CgojIEJlY29tZSBhY3F1YWludGVkIHdpdGggeW91ciBkYXRhIHNvdXJjZXMKCiMjIyBXaGVyZSBkaWQgeW91IGZpbmQgdGhlbT8KCkthZ2dsZQoKIyMjIFdobyBjb2xsZWN0ZWQvbWFpbnRhaW5zIHRoZW0/CgrigKIgODAgQ2VyZWFsczogCgoxLiBUaGVzZSBkYXRhc2V0cyBoYXZlIGJlZW4gZ2F0aGVyZWQgYW5kIGNsZWFuZWQgdXAgYnkgUGV0cmEgSXNlbmJlcmcsIFBpZXJyZSBEcmFnaWNldmljIGFuZCBZdm9ubmUgSmFuc2VuLiBUaGUgb3JpZ2luYWwgc291cmNlIGNhbiBiZSBmb3VuZCBhdCBodHRwczovL3BlcnNvLnRlbGVjb20tcGFyaXN0ZWNoLmZyL2VhZ2FuL2NsYXNzL2lncjIwNC9kYXRhc2V0cy4KCjIuIENocmlzIENyYXdmb3JkIGNyZWF0ZWQgYW5kIG1haW50YWluIHRoaXMgZGF0YXNldCBhdCBLYWdnbGUuCgrigKIgTnV0cml0aW9uIGZhY3RzIGZvciBTdGFyYnVja3MgTWVudToKU3RhcmJ1Y2tzIGlzIHRoZSBtYWludGFpbmVyIGZvciB0aGlzIGRhdGFzZXQuCgojIyMgV2hlbiAmIFdoeSB3ZXJlIHRoZXkgb3JpZ2luYWxseSBjb2xsZWN0ZWQ/CuKAoiBDaHJpcyBDcmF3Zm9yZCBjcmVhdGVkIHRoZSA4MCBjZXJlYWxzIGRhdGFzZXQgb24gMjAxNy0wOC0xOCwgbGFzdCB1cGRhdGVkIGlzIAoyMDE3LTEwLTI0LiBIZSBzdGF0ZWQgdGhhdCAiUnVpbiB5b3VyIGFwcGV0aXRlIGZvciBzdWdhcnkgY2VyZWFsIHdpdGggdGhpcyBkYXRhc2V0ISIKCuKAoiBTdGFyYnVja3MgY3JlYXRlZCB0aGUgZGF0YXNldCBvbiAyMDE3LTA3LTE4LCBsYXN0IHVwZGF0ZWQgaXMgMjAxNy0wNy0yMC4gVGhpcyBkYXRhc2V0IGluY2x1ZGVzIHRoZSBudXRyaXRpb25hbCBpbmZvcm1hdGlvbiBmb3IgU3RhcmJ1Y2tz4oCZIGZvb2QgYW5kIGRyaW5rIG1lbnUgaXRlbXMuIEFsbCBudXRyaXRpb25hbCBpbmZvcm1hdGlvbiBmb3IgZHJpbmtzIGFyZSBmb3IgYSAxMm96IHNlcnZpbmcgc2l6ZS4KCiMjIyBXaGF0IGRvZXMgYSBjYXNlIHJlcHJlc2VudCBpbiBlYWNoIGRhdGEgc291cmNlLCBhbmQgaG93IG1hbnkgdG90YWwgY2FzZXMgYXJlIGF2YWlsYWJsZT8K4oCiIDgwIENlcmVhbHM6IAoK4oCiIE51dHJpdGlvbiBmYWN0cyBmb3IgU3RhcmJ1Y2tzIE1lbnU6CgojIyMgV2hhdCBhcmUgc29tZSBvZiB0aGUgdmFyaWFibGVzIHRoYXQgeW91IHBsYW4gdG8gdXNlCgoKIyBFeHBsb3JlIGludHVpdGlvbiByZWxhdGVkIHRvIHRoZSByZXNlYXJjaCBxdWVzdGlvbgoKIyMjIGluZm9ybWF0aXZlIHBsb3RzCiMjIyBwcmVsaW1pbmFyeSBvYnNlcnZhdGlvbnMKCiMgVHdvIG9yIG1vcmUgZGF0YSBzb3VyY2VzCgoKCgoKCgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmluYWwgUHJvamVjdCBQcmVsaW1pbmFyeSBFREEiCmF1dGhvcjogIkhhaWNoZW4gV2VpIgpkYXRlOiAiTm92IDE1LCAyMDIwIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgoKIyBHdWlkaW5nIFF1ZXN0aW9uCgpDb21wYXJlIHRoZSBudXRyaXRpb24gZmFjdHMgY2VyZWFsIHByb2R1Y3RzLCBTdGFyYnVja3MgYW5kIE1jRG9uYWxkJ3MgbWVudSwgd2hpY2ggb25lIGlzIGEgYmV0dGVyIGNob2ljZSBmb3IgYnJlYWtmYXN0PwoKCiMgQmVjb21lIGFjcXVhaW50ZWQgd2l0aCB5b3VyIGRhdGEgc291cmNlcwoKCiMjIyBXaGVyZSBkaWQgeW91IGZpbmQgdGhlbT8KCkthZ2dsZQoKIyMjIFdobyBjb2xsZWN0ZWQvbWFpbnRhaW5zIHRoZW0/CgrigKIgODAgQ2VyZWFsczogCgoxLiBUaGVzZSBkYXRhc2V0cyBoYXZlIGJlZW4gZ2F0aGVyZWQgYW5kIGNsZWFuZWQgdXAgYnkgUGV0cmEgSXNlbmJlcmcsIFBpZXJyZSBEcmFnaWNldmljIGFuZCBZdm9ubmUgSmFuc2VuLiBUaGUgb3JpZ2luYWwgc291cmNlIGNhbiBiZSBmb3VuZCBhdCBodHRwczovL3BlcnNvLnRlbGVjb20tcGFyaXN0ZWNoLmZyL2VhZ2FuL2NsYXNzL2lncjIwNC9kYXRhc2V0cy4KCjIuIENocmlzIENyYXdmb3JkIGNyZWF0ZWQgYW5kIG1haW50YWluIHRoaXMgZGF0YXNldCBhdCBLYWdnbGUuCgrigKIgTnV0cml0aW9uIGZhY3RzIGZvciBTdGFyYnVja3MgTWVudToKClN0YXJidWNrcyBpcyB0aGUgbWFpbnRhaW5lciBmb3IgdGhpcyBkYXRhc2V0LgoK4oCiIE51dHJpdGlvbiBGYWN0cyBmb3IgTWNEb25hbGQncyBNZW51OgoKTWNEb25hbGQncyBpcyB0aGUgbWFpbnRhaW5lciBmb3IgdGhpcyBkYXRhc2V0LgoKIyMjIFdoZW4gJiBXaHkgd2VyZSB0aGV5IG9yaWdpbmFsbHkgY29sbGVjdGVkPwoK4oCiIENocmlzIENyYXdmb3JkIGNyZWF0ZWQgdGhlIDgwIGNlcmVhbHMgZGF0YXNldCBvbiAyMDE3LTA4LTE4LCBsYXN0IHVwZGF0ZWQgaXMgCjIwMTctMTAtMjQuIEhlIHN0YXRlZCB0aGF0ICJSdWluIHlvdXIgYXBwZXRpdGUgZm9yIHN1Z2FyeSBjZXJlYWwgd2l0aCB0aGlzIGRhdGFzZXQhIgoK4oCiIFN0YXJidWNrcyBjcmVhdGVkIHRoZSBkYXRhc2V0IG9uIDIwMTctMDctMTgsIGxhc3QgdXBkYXRlZCBpcyAyMDE3LTA3LTIwLiBUaGlzIGRhdGFzZXQgaW5jbHVkZXMgdGhlIG51dHJpdGlvbmFsIGluZm9ybWF0aW9uIGZvciBTdGFyYnVja3PigJkgZm9vZCBhbmQgZHJpbmsgbWVudSBpdGVtcy4gCgrigKIgTWNEb25hbGQncyBjcmVhdGVkIHRoZSBkYXRhc2V0IG9uIDIwMTctMDMtMDMuIFRoaXMgZGF0YXNldCBwcm92aWRlcyBhIG51dHJpdGlvbiBhbmFseXNpcyBvZiBldmVyeSBtZW51IGl0ZW0gb24gdGhlIFVTIE1jRG9uYWxkJ3MgbWVudS4KCiMjIyBXaGF0IGRvZXMgYSBjYXNlIHJlcHJlc2VudCBpbiBlYWNoIGRhdGEgc291cmNlLCBhbmQgaG93IG1hbnkgdG90YWwgY2FzZXMgYXJlIGF2YWlsYWJsZT8KCuKAoiA4MCBDZXJlYWxzOiBlYWNoIGNlcmVhbCdzIG51dHJpdGlvbiBmYWN0cy4gSXQgaGFzIDc3IHRvdGFsIGNhc2VzLiAKCuKAoiBOdXRyaXRpb24gZmFjdHMgZm9yIFN0YXJidWNrcyBNZW51OiBhIGtpbmQgb2YgZm9vZCdzIG51dHJpdGlvbiBmYWN0cy4gSXQgaGFzIDExMyB0b3RhbCBjYXNlcy4KCuKAoiBOdXRyaXRpb24gRmFjdHMgZm9yIE1jRG9uYWxkJ3MgTWVudTogZXZlcnkgbWVudSBpdGVtJ3MgbnV0cml0aW9uIGZhY3RzLiBJdCBoYXMgMjYwIHRvdGFsIGNhc2VzLgoKIyMjIFdoYXQgYXJlIHNvbWUgb2YgdGhlIHZhcmlhYmxlcyB0aGF0IHlvdSBwbGFuIHRvIHVzZQoKU2luY2UgY2VyZWFscyBkYXRhIGhhcyAxNiBjb2x1bW5zLCBNY0RvbmFsZCdzIGhhcyAyNCBjb2x1bW5zLCBhbmQgU3RhcmJ1Y2tzIGhhcyA2IGNvbHVtbnMsIEkgd2FudCB0byBjaG9vc2UgdGhlIGNvbW1vbiBjb2x1bW5zIG9mIHRoZW0sIHN1Y2ggYXMgbmFtZSwgQ2Fsb3JpZXMsIEZhdCwgQ2FyYi4sIEZpYmVyLCBQcm90ZWluLiBUaGUgY2VyZWFscyBkYXRhc2V0IGFsc28gaGFzIHR5cGUgYW5kIE1hbnVmYWN0dXJlciwgdGhlc2UgdHdvIHZhcmlhYmxlcyBtYXkgYmUgdXNlZnVsLiAKCgojIEV4cGxvcmUgaW50dWl0aW9uIHJlbGF0ZWQgdG8gdGhlIHJlc2VhcmNoIHF1ZXN0aW9uCgoKIyMjIGluZm9ybWF0aXZlIHBsb3RzCgrigKIgUmFuZ2UgZm9yIGNlcmVhbHM6CgoxLiBDYWxvcmllczogNTAtMTYwCjIuIEZhdChnKTogMC01CjMuIENhcmIuKGcpOiAtMX4yMwo0LiBGaWJlcihnKTowLTE0CjUuIFByb3RlaW4oZyk6IDEtNgoK4oCiIFJhbmdlIGZvciBTdGFyYnVja3M6CgoxLiBDYWxvcmllczogOTAtNjUwCjIuIEZhdChnKTogMC0zNwozLiBDYXJiLihnKTogNS04MAo0LiBGaWJlcihnKTogMC0yMQo1LiBQcm90ZWluKGcpOiAxLTM0CgrigKIgUmFuZ2UgZm9yIE1jRG9uYWxkJ3M6CgoxLiBDYWxvcmllczogMC0xODgwCjIuIEZhdChnKTogMC0xMTgKMy4gQ2FyYi4oZyk6IDAtMTQxCjQuIEZpYmVyKGcpOiAwLTcKNS4gUHJvdGVpbihnKTogMC04NwoKIyMjIHByZWxpbWluYXJ5IG9ic2VydmF0aW9ucwoKSXQgc2VlbXMgbGlrZSBNY0RvbmFsZCdzIGhhcyB0aGUgaGlnaGVzdCBkYXRhIGZvciBhbGwgdGhlIHZhcmlhYmxlcywgYW5kIGNlcmVhbCBoYXMgdGhlIGxvd2VzdCwgaG93ZXZlciwgdGhlIFN0YXJidWNrcyBhbmQgTWNEb25hbGQncyBoYXZlIG1hbnkgaXRlbXMsIHRoaXMgcmVzZWFyY2ggaXMgZm9yIGJyZWFrZmFzdCwgc28gSSBtYXkgbmVlZCB0byBkZWxldGUgc29tZSBpdGVtcyBhbmQgcmVjcmVhdGUgYSBuZXcgdGFibGUgZm9yIHRoZXNlIHR3byBkYXRhc2V0cy4gCgojIERhdGEgc291cmNlcwoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KG1vc2FpYykKQ2VyZWFscyA8LSBtb3NhaWM6OnJlYWQuZmlsZSgiaHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9jcmF3Zm9yZC84MC1jZXJlYWxzP3NlbGVjdD1jZXJlYWwuY3N2IikKU3RhcmJ1Y2tzIDwtIG1vc2FpYzo6cmVhZC5maWxlKCJodHRwczovL3d3dy5rYWdnbGUuY29tL3N0YXJidWNrcy9zdGFyYnVja3MtbWVudT9zZWxlY3Q9c3RhcmJ1Y2tzLW1lbnUtbnV0cml0aW9uLWZvb2QuY3N2IikKTWNEb25hbGRzIDwtIG1vc2FpYzo6cmVhZC5maWxlKCJodHRwczovL3d3dy5rYWdnbGUuY29tL21jZG9uYWxkcy9udXRyaXRpb24tZmFjdHM/c2VsZWN0PW1lbnUuY3N2IikKYGBgCgoKCgoKCg==</div>
 
 
 
