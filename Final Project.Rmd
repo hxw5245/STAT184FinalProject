@@ -17,14 +17,22 @@ library(tidyverse)
 library(mosaic)
 library(DataComputing)
 ```
-```{r}
-install.packages(datacom)
-```
+
 # Data Access
 
 ```{r}
-Cereals <- read_csv("https://www.kaggle.com/crawford/80-cereals?select=cereal.csv")
+Cereals <- read.csv("/Users/Zoey/Desktop/cereal.csv")
 Cereals
+Starbucks <- read.csv("/Users/Zoey/Desktop/food.csv")
+Starbucks
+McDonalds <- read.csv("/Users/Zoey/Desktop/menu.csv")
+McDonalds
+```
+```{r}
+
+```
+```{r}
+
 ```
 # Data Wrangling
 # Data Visualization
