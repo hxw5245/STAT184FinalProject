@@ -1,0 +1,10 @@
+---
+title: "Final Project"
+author: "Haichen Wei"
+date: "Dec 13, 2020"
+output: html_notebook
+---
+
+# Data Access
+# Data Wrangling
+# Data Visualization
